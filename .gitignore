@@ -3,3 +3,8 @@
 /build/
 /SpawnersSK-API/build/
 /SpawnersSK-Bukkit/build/
+
+# IntelliJ
+*.iml
+.idea/
+out/
