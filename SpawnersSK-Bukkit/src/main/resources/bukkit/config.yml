@@ -1,0 +1,12 @@
+#  _____ _____ _____ _____
+# |   __|  _  |   __|  |  |
+# |__   |   __|__   |    -|
+# |_____|__|  |_____|__|__|
+#
+# This is the main configuration file for SpawnersSK.
+#
+Config:
+  # Enable/disable the debug mode.
+  # This will print out debug messages in the console.
+  # This is useful for debugging issues with SpawnersSK.
+  debug: false
