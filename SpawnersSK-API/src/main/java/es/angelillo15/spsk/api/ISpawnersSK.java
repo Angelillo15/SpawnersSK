@@ -16,6 +16,11 @@ public interface ISpawnersSK  {
     void drawLogo();
 
     /**
+     * Load the libs of the plugin
+     */
+    void loadLibs();
+
+    /**
      * Get the instance of the logger
      * @return ILogger see {@link ILogger}
      */
