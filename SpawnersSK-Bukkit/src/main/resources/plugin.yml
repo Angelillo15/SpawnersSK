@@ -1,6 +1,6 @@
 name: SpawnersSK
 version: '${version}'
-main: es.angelillo15.spsk.SpawnersSKLoader
+main: es.angelillo15.spsk.bukkit.SpawnersSKLoader
 api-version: 1.19
 prefix: MAStaff
 authors: [ Angelillo15 ]
