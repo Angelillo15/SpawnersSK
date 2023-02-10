@@ -1,0 +1,8 @@
+name: SpawnersSK
+version: '${version}'
+main: es.angelillo15.spsk.SpawnersSKLoader
+api-version: 1.19
+prefix: MAStaff
+authors: [ Angelillo15 ]
+description: Simple and optimised Spawner plugin
+website: angelillo15.es
