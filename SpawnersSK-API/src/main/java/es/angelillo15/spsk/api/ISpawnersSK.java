@@ -4,7 +4,12 @@ import es.angelillo15.spsk.api.utils.ILogger;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 
-public interface ISpawnersSK extends Plugin {
+public interface ISpawnersSK  {
+    /**
+     * Get if the plugin is in debug mode
+     * @return boolean
+     */
+    boolean isDebug();
     /**
      * Draw the logo of the plugin
      */
