@@ -1,10 +1,13 @@
 package es.angelillo15.spsk.bukkit;
 
+import es.angelillo15.spsk.api.Constants;
 import es.angelillo15.spsk.api.ISpawnersSK;
+import es.angelillo15.spsk.api.libs.LibsManager;
 import es.angelillo15.spsk.api.utils.ILogger;
 import es.angelillo15.spsk.api.utils.TextUtils;
 import es.angelillo15.spsk.bukkit.utils.Logger;
 import lombok.Getter;
+import net.byteflux.libby.BukkitLibraryManager;
 import org.bukkit.plugin.java.JavaPlugin;
 public class SpawnersSK extends JavaPlugin implements ISpawnersSK {
     @Getter
@@ -31,11 +34,21 @@ public class SpawnersSK extends JavaPlugin implements ISpawnersSK {
         logger.info(TextUtils.simpleColorize("&b|__   |   __|__   |    -|"));
         logger.info(TextUtils.simpleColorize("&b|_____|__|  |_____|__|__|"));
         logger.info(TextUtils.simpleColorize(""));
-        logger.info(TextUtils.simpleColorize("Loading SpawnersSK v"
-                + this.getDescription().getVersion() + " by " +
-                this.getDescription().getAuthors().get(1))
+        logger.info(TextUtils.simpleColorize("&bLoading SpawnersSK v"
+                + Constants.VERSION + " "+ Constants.COMMIT + " by " +
+                this.getDescription().getAuthors().get(0))
         );
         logger.info(TextUtils.simpleColorize(""));
 
+    }
+
+    @Override
+    public void loadLibs(){
+        BukkitLibraryManager manager = new BukkitLibraryManager(this);
+        manager.addJitPack();
+        manager.addMavenCentral();
+
+        LibsManager.load();
+        LibsManager.getLibs().forEach(manager::loadLibrary);
     }
 }
